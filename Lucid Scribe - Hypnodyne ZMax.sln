@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypnodyne ZMax", "Hypnodyne ZMax\Hypnodyne ZMax.csproj", "{1565543B-DFFC-4506-BE27-9BF3E63516B8}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LucidScribe.Hypnodyne.ZMax", "Installer\Lucid Scribe Hypnodyne ZMax.vdproj", "{39D4F6FB-2918-403A-96A7-3A16778C7441}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LucidScribe.Hypnodyne.ZMax", "Installer\Lucid Scribe Hypnodyne ZMax.vdproj", "{7E886AD7-AE3A-4A24-A966-4961D35CDC68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,12 +17,15 @@ Global
 		{1565543B-DFFC-4506-BE27-9BF3E63516B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1565543B-DFFC-4506-BE27-9BF3E63516B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1565543B-DFFC-4506-BE27-9BF3E63516B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39D4F6FB-2918-403A-96A7-3A16778C7441}.Debug|Any CPU.ActiveCfg = Debug
-		{39D4F6FB-2918-403A-96A7-3A16778C7441}.Debug|Any CPU.Build.0 = Debug
-		{39D4F6FB-2918-403A-96A7-3A16778C7441}.Release|Any CPU.ActiveCfg = Release
-		{39D4F6FB-2918-403A-96A7-3A16778C7441}.Release|Any CPU.Build.0 = Release
+		{7E886AD7-AE3A-4A24-A966-4961D35CDC68}.Debug|Any CPU.ActiveCfg = Debug
+		{7E886AD7-AE3A-4A24-A966-4961D35CDC68}.Debug|Any CPU.Build.0 = Debug
+		{7E886AD7-AE3A-4A24-A966-4961D35CDC68}.Release|Any CPU.ActiveCfg = Release
+		{7E886AD7-AE3A-4A24-A966-4961D35CDC68}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50A14039-6115-4778-AB81-CA71F5490FE4}
 	EndGlobalSection
 EndGlobal

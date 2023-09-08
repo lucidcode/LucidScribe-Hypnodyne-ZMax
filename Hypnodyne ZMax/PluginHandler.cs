@@ -104,8 +104,6 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
                 NetworkStream stream = tcpClient.GetStream();
                 byte[] request = System.Text.Encoding.UTF8.GetBytes("HELLO\r\n");
                 stream.Write(request, 0, request.Length);
-                request = System.Text.Encoding.UTF8.GetBytes("IDLEMODE_SENDBYTES 1 3 900 0 00-26-0B-03-0E-37-98\r\n");
-                stream.Write(request, 0, request.Length);
 
                 while (running)
                 {
@@ -202,10 +200,7 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
                                             HighscoreValue = (scaled_eegr + scaled_eegl) / 2;
                                         }
 
-                                        //if (raw >= DisplayValue)
-                                        //{
-                                            DisplayValue = (scaled_eegr + scaled_eegl) / 2;
-                                        //}
+                                        DisplayValue = (scaled_eegr + scaled_eegl) / 2;
 
                                         if (ZMaxEEGRChanged != null)
                                         {
