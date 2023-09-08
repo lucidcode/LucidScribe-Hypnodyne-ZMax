@@ -33,6 +33,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_40ABEDA70EDB028A847E1CF31727B005"
+        "OwnerKey" = "8:_D5F4677254244E92ACAD2F83F55F5016"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4731F830984047983BEBE4FB27C85902"
+        "OwnerKey" = "8:_D5F4677254244E92ACAD2F83F55F5016"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_477457C0485A4C12B13AB5F4C87EF2C1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -63,12 +75,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7023FC406BF91CECA63AFDB014F435E9"
-        "OwnerKey" = "8:_D5F4677254244E92ACAD2F83F55F5016"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_77832F1CD5FC41C9BC7BB246E418C02D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -83,12 +89,6 @@
         {
         "MsmKey" = "8:_85BFF4D38A9C4842BD0A8F2B49CBF873"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_923357620E9D3ABDCCBABA93063D7271"
-        "OwnerKey" = "8:_D5F4677254244E92ACAD2F83F55F5016"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -111,14 +111,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C86B29555B0E46699DF4906A730891E8"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_A75361A01E58A690E926FC1C1BC76FB9"
+        "OwnerKey" = "8:_D5F4677254244E92ACAD2F83F55F5016"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CE7F9460693BB111E0B0D4EA2052583F"
+        "MsmKey" = "8:_B9E9B127E89CAC45223EE4FBC89C1443"
         "OwnerKey" = "8:_D5F4677254244E92ACAD2F83F55F5016"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C86B29555B0E46699DF4906A730891E8"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -131,12 +137,6 @@
         {
         "MsmKey" = "8:_DB5EDEF8D7884AC1BD93265A814D5B33"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F7BC44D96C5ABB3142B9F4F936EF6857"
-        "OwnerKey" = "8:_D5F4677254244E92ACAD2F83F55F5016"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -160,25 +160,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7023FC406BF91CECA63AFDB014F435E9"
+        "OwnerKey" = "8:_40ABEDA70EDB028A847E1CF31727B005"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CE7F9460693BB111E0B0D4EA2052583F"
+        "OwnerKey" = "8:_B9E9B127E89CAC45223EE4FBC89C1443"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_923357620E9D3ABDCCBABA93063D7271"
+        "OwnerKey" = "8:_4731F830984047983BEBE4FB27C85902"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F7BC44D96C5ABB3142B9F4F936EF6857"
+        "OwnerKey" = "8:_A75361A01E58A690E926FC1C1BC76FB9"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -278,7 +278,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:3.5.30729     "
+                "FrameworkVersion" = "8:3.5.30729      "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -344,6 +344,68 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40ABEDA70EDB028A847E1CF31727B005"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:lucidcode.LucidScribe.TCMP, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_40ABEDA70EDB028A847E1CF31727B005"
+                    {
+                    "Name" = "8:lucidcode.LucidScribe.TCMP.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:lucidcode.LucidScribe.TCMP.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_491A001224CF4D699EA475B2FB5F2890"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4731F830984047983BEBE4FB27C85902"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:lucidcode.LucidScribe.Interface, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_4731F830984047983BEBE4FB27C85902"
+                    {
+                    "Name" = "8:lucidcode.LucidScribe.Interface.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:lucidcode.LucidScribe.Interface.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_491A001224CF4D699EA475B2FB5F2890"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_477457C0485A4C12B13AB5F4C87EF2C1"
@@ -468,37 +530,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7023FC406BF91CECA63AFDB014F435E9"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:lucidcode.LucidScribe.TCMP, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_7023FC406BF91CECA63AFDB014F435E9"
-                    {
-                    "Name" = "8:lucidcode.LucidScribe.TCMP.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:lucidcode.LucidScribe.TCMP.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_491A001224CF4D699EA475B2FB5F2890"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_77832F1CD5FC41C9BC7BB246E418C02D"
             {
             "SourcePath" = "8:..\\Hypnodyne ZMax\\Plugins\\ZMax TCMP.lsd"
@@ -557,37 +588,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_923357620E9D3ABDCCBABA93063D7271"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:lucidcode.LucidScribe.Interface, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_923357620E9D3ABDCCBABA93063D7271"
-                    {
-                    "Name" = "8:lucidcode.LucidScribe.Interface.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:lucidcode.LucidScribe.Interface.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_491A001224CF4D699EA475B2FB5F2890"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_92A98C7469E4447497F8692D6DB1B693"
@@ -650,12 +650,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C86B29555B0E46699DF4906A730891E8"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A75361A01E58A690E926FC1C1BC76FB9"
             {
-            "SourcePath" = "8:..\\Lucid Scribe - Hypnodyne ZMax.sln"
-            "TargetName" = "8:Lucid Scribe - Hypnodyne ZMax.sln"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:lucidcode.Controls, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_A75361A01E58A690E926FC1C1BC76FB9"
+                    {
+                    "Name" = "8:lucidcode.Controls.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:lucidcode.Controls.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_4ED188BE6F0F4F0AB3CF7FD17672FAC2"
+            "Folder" = "8:_491A001224CF4D699EA475B2FB5F2890"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -666,18 +677,18 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CE7F9460693BB111E0B0D4EA2052583F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B9E9B127E89CAC45223EE4FBC89C1443"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:lucidcode.LucidScribe.Interface.Illuminated, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CE7F9460693BB111E0B0D4EA2052583F"
+                    "_B9E9B127E89CAC45223EE4FBC89C1443"
                     {
                     "Name" = "8:lucidcode.LucidScribe.Interface.Illuminated.dll"
                     "Attributes" = "3:512"
@@ -701,6 +712,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C86B29555B0E46699DF4906A730891E8"
+            {
+            "SourcePath" = "8:..\\Lucid Scribe - Hypnodyne ZMax.sln"
+            "TargetName" = "8:Lucid Scribe - Hypnodyne ZMax.sln"
+            "Tag" = "8:"
+            "Folder" = "8:_4ED188BE6F0F4F0AB3CF7FD17672FAC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DB5EDEF8D7884AC1BD93265A814D5B33"
             {
             "SourcePath" = "8:Lucid Scribe.ico"
@@ -719,37 +750,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F7BC44D96C5ABB3142B9F4F936EF6857"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:lucidcode.Controls, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F7BC44D96C5ABB3142B9F4F936EF6857"
-                    {
-                    "Name" = "8:lucidcode.Controls.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:lucidcode.Controls.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_491A001224CF4D699EA475B2FB5F2890"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -929,15 +929,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Lucid Scribe Hypnodyne ZMax"
-        "ProductCode" = "8:{FA12B9AE-3B82-40B3-BB61-87680932C7B0}"
-        "PackageCode" = "8:{EC56DF80-F978-486C-B291-B3C0FA363A6E}"
+        "ProductCode" = "8:{16E930C9-7A96-4EE0-8095-DC3D569F7B13}"
+        "PackageCode" = "8:{E9E9EB19-E3F7-4B4D-AF66-59A29B41D551}"
         "UpgradeCode" = "8:{D968DAE8-1754-45B3-992D-C4CC6A7615B8}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:lucidcode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.lucidcode.com/Contact"
@@ -1461,7 +1461,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D5F4677254244E92ACAD2F83F55F5016"
             {
-            "SourcePath" = "8:..\\Hypnodyne ZMax\\obj\\Debug\\lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax.dll"
+            "SourcePath" = "8:..\\Hypnodyne ZMax\\obj\\Release\\lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_491A001224CF4D699EA475B2FB5F2890"
