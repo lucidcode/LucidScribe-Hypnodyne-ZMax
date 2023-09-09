@@ -106,8 +106,10 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
                 NetworkStream stream = tcpClient.GetStream();
                 byte[] request = System.Text.Encoding.UTF8.GetBytes("HELLO\r\n");
                 stream.Write(request, 0, request.Length);
+                stream.Flush();
                 request = System.Text.Encoding.UTF8.GetBytes("IDLEMODE_SENDBYTES 1 3 900 0 00-26-0B-03-0E-37-98\r\n");
                 stream.Write(request, 0, request.Length);
+                stream.Flush();
 
                 while (running)
                 {
@@ -148,73 +150,68 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
         {
             try
             {
-                if (!data.StartsWith("D")) return;
-                string[] stringSeparators = new string[] { "\r\n", "\r", "\n", "\n\r", "." };
+                string[] stringSeparators = new string[] { "\r\n", "\r", "\n", "\n\r" };
                 string[] lines = data.Split(stringSeparators, StringSplitOptions.None);
                 for (int i = 0; i < lines.Length; i++)
                 {
                     String line = lines[i];
-                    if (line != "")
+                    if (line == "" || !line.StartsWith("D")) continue;
+
+                    String dataline = line.Substring(1);
+                    string[] parts = dataline.Split('.');
+                    byte[] buf = HexToBytes(parts[1].Replace("-", ""));
+                    if (buf.Length == 0) continue;
+
+                    int packet_type = buf[0];
+                    if ((packet_type >= 1) && (packet_type <= 11))
                     {
-                        String dataline = line.Substring(1);
-                        string[] parts = dataline.Split('.');
-                        byte[] buf = HexToBytes(parts[1].Replace("-", ""));
-                        if (buf.Length == 0)
+                        if (buf.Length == 40)
                         {
-                            continue;
-                        }
+                            int eegrv = buf[1] * 256 + buf[2];
+                            int eeglv = buf[3] * 256 + buf[4];
+                            int dx = buf[5] * 256 + buf[6];
+                            int dy = buf[7] * 256 + buf[8];
+                            int dz = buf[9] * 256 + buf[10];
+                            double scaled_eegr = ScaleEEG(eegrv);
+                            double scaled_eegl = ScaleEEG(eeglv);
+                            double scaled_dx = ScaleAccel(dx);
+                            double scaled_dy = ScaleAccel(dy);
+                            double scaled_dz = ScaleAccel(dz);
 
-                        int packet_type = buf[0];
-                        if ((packet_type >= 1) && (packet_type <= 11))
-                        {
-                            if (buf.Length == 40)
+                            scaled_eegr += 500;
+                            scaled_eegl += 500;
+
+                            m_dblX = (scaled_dx + 2) * 250;
+                            m_dblY = (scaled_dy + 2) * 250;
+                            m_dblZ = (scaled_dz + 2) * 250;
+
+                            if (ClearDisplay)
                             {
-                                int eegrv = buf[1] * 256 + buf[2];
-                                int eeglv = buf[3] * 256 + buf[4];
-                                int dx = buf[5] * 256 + buf[6];
-                                int dy = buf[7] * 256 + buf[8];
-                                int dz = buf[9] * 256 + buf[10];
-                                double scaled_eegr = ScaleEEG(eegrv);
-                                double scaled_eegl = ScaleEEG(eeglv);
-                                double scaled_dx = ScaleAccel(dx);
-                                double scaled_dy = ScaleAccel(dy);
-                                double scaled_dz = ScaleAccel(dz);
+                                ClearDisplay = false;
+                                DisplayValue = 0;
+                            }
 
-                                scaled_eegr += 500;
-                                scaled_eegl += 500;
+                            if (ClearHighscore)
+                            {
+                                ClearHighscore = false;
+                                DisplayValue = 0;
+                            }
 
-                                m_dblX = (scaled_dx + 2) * 250;
-                                m_dblY = (scaled_dy + 2) * 250;
-                                m_dblZ = (scaled_dz + 2) * 250;
+                            double raw = (scaled_eegr + scaled_eegl) / 2;
+                            if (raw >= HighscoreValue)
+                            {
+                                HighscoreValue = (scaled_eegr + scaled_eegl) / 2;
+                            }
 
-                                if (ClearDisplay)
-                                {
-                                    ClearDisplay = false;
-                                    DisplayValue = 0;
-                                }
+                            DisplayValue = (scaled_eegr + scaled_eegl) / 2;
 
-                                if (ClearHighscore)
-                                {
-                                    ClearHighscore = false;
-                                    DisplayValue = 0;
-                                }
-
-                                double raw = (scaled_eegr + scaled_eegl) / 2;
-                                if (raw >= HighscoreValue)
-                                {
-                                    HighscoreValue = (scaled_eegr + scaled_eegl) / 2;
-                                }
-
-                                DisplayValue = (scaled_eegr + scaled_eegl) / 2;
-
-                                if (ZMaxEEGRChanged != null)
-                                {
-                                    ZMaxEEGRChanged(null, new ZMaxChangedEventArgs(Convert.ToInt32(scaled_eegr)));
-                                }
-                                if (ZMaxEEGLChanged != null)
-                                {
-                                    ZMaxEEGLChanged(null, new ZMaxChangedEventArgs(Convert.ToInt32(scaled_eegl)));
-                                }
+                            if (ZMaxEEGRChanged != null)
+                            {
+                                ZMaxEEGRChanged(null, new ZMaxChangedEventArgs(Convert.ToInt32(scaled_eegr)));
+                            }
+                            if (ZMaxEEGLChanged != null)
+                            {
+                                ZMaxEEGLChanged(null, new ZMaxChangedEventArgs(Convert.ToInt32(scaled_eegl)));
                             }
                         }
                     }
