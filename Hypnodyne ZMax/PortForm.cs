@@ -31,6 +31,22 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
           loaded = true;
         }
 
+        public void UpdateData(string data)
+        {
+            if (dataTextbox.InvokeRequired)
+            {
+                dataTextbox.BeginInvoke((MethodInvoker)delegate () {
+                    if (dataTextbox.Text.Length > 1024) dataTextbox.Text = "";
+                    dataTextbox.Text += data; 
+                });
+            }
+            else
+            {
+                if (dataTextbox.Text.Length > 1024) dataTextbox.Text = "";
+                dataTextbox.Text += data;
+            }
+        }
+
         private void LoadSettings()
         {
           if (!File.Exists(m_strPath + "Plugins\\Hypnodyne.ZMax.User.lsd"))
