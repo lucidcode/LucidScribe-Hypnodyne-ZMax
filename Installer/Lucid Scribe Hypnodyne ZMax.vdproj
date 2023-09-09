@@ -278,7 +278,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:3.5.30729      "
+                "FrameworkVersion" = "8:3.5.30729       "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -929,15 +929,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Lucid Scribe Hypnodyne ZMax"
-        "ProductCode" = "8:{16E930C9-7A96-4EE0-8095-DC3D569F7B13}"
-        "PackageCode" = "8:{E9E9EB19-E3F7-4B4D-AF66-59A29B41D551}"
+        "ProductCode" = "8:{FEB88E90-7A2F-4FA5-9876-E571DAEE597C}"
+        "PackageCode" = "8:{3C64919A-8A76-4C99-B2E2-7B2098C9DCF4}"
         "UpgradeCode" = "8:{D968DAE8-1754-45B3-992D-C4CC6A7615B8}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:lucidcode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.lucidcode.com/Contact"
