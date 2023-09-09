@@ -48,6 +48,7 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
         private static bool ClearHighscore;
         private static double DisplayValue = 500;
         private static double HighscoreValue = 500;
+        private static PortForm formPort = new PortForm();
 
         public static Boolean TCMP = false;
 
@@ -56,8 +57,7 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
             try
             {
                 if (!m_boolInitialized && !m_boolInitError)
-                {
-                    PortForm formPort = new PortForm();
+                {                    
                     if (formPort.ShowDialog() == DialogResult.OK)
                     {
                         try
@@ -69,6 +69,8 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
                             m_boolInitialized = true;
                             serverThread = new Thread(new ThreadStart(startListening));
                             serverThread.Start();
+
+                            formPort.Show();
                         }
                         catch (Exception ex)
                         {
@@ -104,6 +106,8 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
                 NetworkStream stream = tcpClient.GetStream();
                 byte[] request = System.Text.Encoding.UTF8.GetBytes("HELLO\r\n");
                 stream.Write(request, 0, request.Length);
+                request = System.Text.Encoding.UTF8.GetBytes("IDLEMODE_SENDBYTES 1 3 900 0 00-26-0B-03-0E-37-98\r\n");
+                stream.Write(request, 0, request.Length);
 
                 while (running)
                 {
@@ -124,6 +128,7 @@ namespace lucidcode.LucidScribe.Plugin.Hypnodyne.ZMax
                         String data = Encoding.UTF8.GetString(writer.ToArray());
                         if (data != "")
                         {
+                            formPort.UpdateData(data);
                             processData(data);
                         }
                     }
